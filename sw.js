@@ -1,6 +1,6 @@
 // Service worker albust.id Content Planner
 // Naikkan VERSION setiap kali kamu mengubah index.html agar pengguna mendapat versi terbaru.
-const VERSION = "v1.1.0";
+const VERSION = "v1.2.0";
 const CACHE = "albust-planner-" + VERSION;
 const ASSETS = [
   "./",

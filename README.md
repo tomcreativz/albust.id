@@ -1,6 +1,6 @@
 # albust.id Content Planner (PWA)
 
-500 ide judul konten Instagram untuk **albust.id** (Financial, Mindset, Syariah x Crypto) dengan checklist "sudah dibuat", pencarian, filter, progres, streak, backup/restore, dan bisa dipasang sebagai aplikasi (PWA, jalan offline).
+500 judul Reels + 100 ide Threads kontroversial (gaya debat) untuk **albust.id** (Financial, Mindset, Syariah x Crypto), dengan checklist "sudah dibuat", pencarian, filter, progres, streak, backup/restore, dan bisa dipasang sebagai aplikasi (PWA, jalan offline).
 
 ## Cara publish ke GitHub Pages
 1. Buat repository baru di GitHub (misal `albust-planner`), set **Public**.
