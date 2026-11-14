@@ -1,0 +1,20 @@
+{
+  "name": "albust.id Content Planner",
+  "short_name": "albust Planner",
+  "description": "500 ide judul konten Instagram albust.id lengkap dengan checklist progres.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070b0f",
+  "theme_color": "#070b0f",
+  "lang": "id",
+  "categories": ["finance", "productivity", "education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

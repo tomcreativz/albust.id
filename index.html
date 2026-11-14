@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>albust.id • Content Planner 500 Hari</title>
+<meta name="description" content="500 ide judul konten Instagram albust.id (Financial, Mindset, Syariah x Crypto) lengkap dengan checklist progres.">
+<meta name="theme-color" content="#070b0f">
+<meta name="color-scheme" content="dark">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="albust Planner">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+:root{
+  --bg:#070b0f; --bg2:#0b1116; --card:#0e151b; --card2:#121b22; --line:#1b2730;
+  --text:#e9f2ed; --muted:#8ea298; --dim:#5f7269;
+  --g1:#22e07a; --g2:#0fa968; --g3:#0b6b46;
+  --reels:#7cc8ff; --carousel:#22e07a; --single:#ffc65c;
+  --danger:#ff6b6b; --radius:16px;
+  --safe-t:env(safe-area-inset-top,0px); --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background-image:radial-gradient(900px 420px at 85% -10%,rgba(34,224,122,.13),transparent 60%),
+                   radial-gradient(700px 380px at -10% 10%,rgba(15,169,104,.10),transparent 60%);
+  background-repeat:no-repeat;min-height:100vh;
+  padding-bottom:calc(40px + var(--safe-b));
+}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:900px;margin:0 auto;padding:calc(18px + var(--safe-t)) 16px 0}
+
+/* header */
+header.top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.logo{width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 2px rgba(34,224,122,.5),0 0 24px rgba(34,224,122,.25);flex:none}
+.brand{flex:1;min-width:0}
+.brand h1{margin:0;font-size:20px;letter-spacing:-.2px;line-height:1.2}
+.brand h1 span{color:var(--g1)}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.icon-btn{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;flex:none}
+.icon-btn:hover{border-color:var(--g2)}
+.icon-btn svg{width:20px;height:20px;stroke:var(--text);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;border-radius:22px;padding:20px;
+  background:linear-gradient(160deg,#0f2a20 0%,#0c1a17 45%,#0b1317 100%);
+  border:1px solid rgba(34,224,122,.28);
+  box-shadow:0 18px 50px -24px rgba(34,224,122,.35);
+}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(34,224,122,.22),transparent 65%);pointer-events:none}
+.hero-row{display:flex;gap:18px;align-items:center}
+.ring{position:relative;width:96px;height:96px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:9}
+.ring .bg{stroke:rgba(255,255,255,.08)}
+.ring .fg{stroke:url(#grad);stroke-linecap:round;transition:stroke-dashoffset .6s ease}
+.ring .pct{position:absolute;inset:0;display:grid;place-items:center;text-align:center;line-height:1.1}
+.ring .pct b{font-size:22px}
+.ring .pct small{display:block;color:var(--muted);font-size:11px}
+.hero-main{flex:1;min-width:0;position:relative;z-index:1}
+.eyebrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px;font-size:12px;color:var(--muted)}
+.hero-title{font-size:20px;font-weight:700;line-height:1.3;letter-spacing:-.2px;margin:0 0 14px;word-wrap:break-word}
+.hero-actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--card2);padding:10px 14px;border-radius:12px;font-weight:600;font-size:14px;display:inline-flex;gap:8px;align-items:center;transition:.15s}
+.btn:hover{border-color:var(--g2)}
+.btn.primary{background:linear-gradient(135deg,var(--g1),var(--g2));color:#03150c;border-color:transparent}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.danger{color:var(--danger);border-color:rgba(255,107,107,.35)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0 18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 10px;text-align:center}
+.stat b{display:block;font-size:20px;letter-spacing:-.3px}
+.stat span{font-size:11.5px;color:var(--muted)}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:600;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted);white-space:nowrap}
+.chip i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.f-R{color:var(--reels);border-color:rgba(124,200,255,.35)}
+.f-C{color:var(--carousel);border-color:rgba(34,224,122,.35)}
+.f-S{color:var(--single);border-color:rgba(255,198,92,.35)}
+
+/* controls */
+.controls{position:sticky;top:0;z-index:20;margin:0 -16px;padding:10px 16px 10px;background:linear-gradient(var(--bg) 78%,rgba(7,11,15,0));backdrop-filter:blur(6px)}
+.search{position:relative}
+.search input{width:100%;background:var(--card);border:1px solid var(--line);color:var(--text);padding:12px 14px 12px 40px;border-radius:12px;font:inherit;outline:none}
+.search input:focus{border-color:var(--g2)}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round}
+.row{display:flex;gap:8px;margin-top:10px;align-items:center}
+.seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:3px;flex:1}
+.seg button{flex:1;border:0;background:transparent;padding:7px 6px;border-radius:9px;font-size:13px;font-weight:600;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:linear-gradient(135deg,var(--g1),var(--g2));color:#03150c}
+select{background:var(--card);border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:12px;font:inherit;font-size:13px;outline:none}
+.cats{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex:none;border:1px solid var(--line);background:var(--card);padding:7px 12px;border-radius:999px;font-size:12.5px;font-weight:600;color:var(--muted);display:inline-flex;gap:7px;align-items:center}
+.cat i{width:8px;height:8px;border-radius:50%}
+.cat em{font-style:normal;color:var(--dim);font-weight:500}
+.cat[aria-pressed="true"]{border-color:var(--g1);color:var(--text);background:rgba(34,224,122,.1)}
+
+/* list */
+.count{color:var(--muted);font-size:12.5px;margin:6px 2px 10px}
+.list{display:grid;gap:10px}
+.item{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:13px 12px;transition:.15s}
+.item:hover{border-color:#27404a}
+.item.done{background:rgba(34,224,122,.045);border-color:rgba(34,224,122,.18)}
+.item.done .t{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(142,162,152,.5)}
+.item.today{border-color:var(--g1);box-shadow:0 0 0 1px rgba(34,224,122,.4)}
+.check{flex:none;width:28px;height:28px;border-radius:9px;border:2px solid #31464f;background:transparent;display:grid;place-items:center;margin-top:1px;transition:.15s}
+.check svg{width:16px;height:16px;stroke:#03150c;fill:none;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;opacity:0;transform:scale(.6);transition:.15s}
+.item.done .check{background:linear-gradient(135deg,var(--g1),var(--g2));border-color:transparent}
+.item.done .check svg{opacity:1;transform:scale(1)}
+.body{flex:1;min-width:0}
+.t{font-weight:600;line-height:1.35;word-wrap:break-word}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:7px;font-size:12px;color:var(--dim)}
+.meta .no{font-weight:700;color:var(--muted)}
+.copy{flex:none;border:0;background:transparent;padding:6px;border-radius:8px;opacity:.7}
+.copy:hover{opacity:1;background:rgba(255,255,255,.06)}
+.copy svg{width:17px;height:17px;stroke:var(--muted);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.more{display:block;margin:16px auto 0}
+.empty{text-align:center;color:var(--muted);padding:40px 10px;border:1px dashed var(--line);border-radius:var(--radius)}
+mark{background:rgba(34,224,122,.25);color:inherit;border-radius:3px;padding:0 1px}
+
+/* dialog + toast */
+dialog{background:var(--bg2);color:var(--text);border:1px solid var(--line);border-radius:20px;padding:0;width:min(480px,calc(100vw - 28px));max-height:86vh}
+dialog::backdrop{background:rgba(0,0,0,.65);backdrop-filter:blur(3px)}
+.dlg{padding:20px}
+.dlg h2{margin:0 0 4px;font-size:18px}
+.dlg p.sub{margin:0 0 14px;color:var(--muted);font-size:13px}
+.field{margin:14px 0}
+.field label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:6px;font-weight:600}
+.field input[type=date]{width:100%;background:var(--card);border:1px solid var(--line);color:var(--text);padding:11px 12px;border-radius:12px;font:inherit;color-scheme:dark}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btns .btn{justify-content:center}
+.note{font-size:12px;color:var(--dim);margin-top:14px;line-height:1.55}
+.toast{position:fixed;left:50%;bottom:calc(22px + var(--safe-b));transform:translate(-50%,30px);opacity:0;background:#16222a;border:1px solid var(--line);padding:11px 14px;border-radius:14px;display:flex;gap:14px;align-items:center;z-index:60;transition:.25s;max-width:calc(100vw - 28px);box-shadow:0 14px 40px rgba(0,0,0,.5);font-size:14px}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast button{background:none;border:0;color:var(--g1);font-weight:700;padding:0}
+footer{margin-top:34px;padding:18px 0 0;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center;line-height:1.6}
+footer b{color:var(--muted)}
+.hidden{display:none!important}
+
+@media(max-width:560px){
+  .hero{padding:16px}
+  .hero-row{flex-direction:column;align-items:stretch;gap:14px}
+  .ring{width:84px;height:84px;margin:0 auto}
+  .hero-title{font-size:18px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .hero-actions .btn{flex:1;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22e07a"/><stop offset="1" stop-color="#0fa968"/></linearGradient></defs>
+</svg>
+
+<div class="wrap">
+  <header class="top">
+    <img class="logo" src="icons/icon-192.png" alt="Logo albust.id" width="52" height="52">
+    <div class="brand">
+      <h1>albust<span>.id</span> Content Planner</h1>
+      <p>500 hari konten • Financial &amp; Mindset • Syariah x Crypto • semua format Reels</p>
+    </div>
+    <button class="icon-btn" id="btnSettings" aria-label="Pengaturan">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+    </button>
+  </header>
+
+  <section class="hero" aria-live="polite">
+    <div class="hero-row">
+      <div class="ring" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="42"/><circle class="fg" id="ringFg" cx="50" cy="50" r="42" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg>
+        <div class="pct"><div><b id="pctNum">0%</b><small id="pctSub">0/500</small></div></div>
+      </div>
+      <div class="hero-main" id="hero"></div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat"><b id="sDone">0</b><span>Sudah dibuat</span></div>
+    <div class="stat"><b id="sLeft">500</b><span>Belum dibuat</span></div>
+    <div class="stat"><b id="sStreak">0</b><span>Streak hari</span></div>
+    <div class="stat"><b id="sEta">-</b><span>Estimasi selesai</span></div>
+  </div>
+
+  <div class="controls">
+    <div class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Cari judul, kategori, atau nomor hari…" autocomplete="off" aria-label="Cari judul">
+    </div>
+    <div class="row">
+      <div class="seg" role="group" aria-label="Filter status">
+        <button data-st="all" aria-pressed="true">Semua</button>
+        <button data-st="todo" aria-pressed="false">Belum</button>
+        <button data-st="done" aria-pressed="false">Sudah</button>
+      </div>
+    </div>
+    <div class="cats" id="cats" role="group" aria-label="Filter kategori"></div>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div class="list" id="list"></div>
+  <button class="btn more hidden" id="more">Tampilkan lebih banyak</button>
+
+  <footer>
+    <b>albust.id</b> • Konten bersifat edukasi, bukan saran investasi.<br>
+    Untuk topik syariah, selalu rujuk fatwa resmi (DSN-MUI) dan ulama yang kompeten.<br>
+    Progres tersimpan di perangkat ini. Gunakan Pengaturan → Backup untuk memindahkannya.
+  </footer>
+</div>
+
+<dialog id="dlg">
+  <div class="dlg">
+    <h2>Pengaturan</h2>
+    <p class="sub">Atur jadwal, backup progres, dan pasang aplikasi.</p>
+    <div class="field">
+      <label for="start">Tanggal mulai posting (Hari 1)</label>
+      <input type="date" id="start">
+    </div>
+    <div class="btns">
+      <button class="btn" id="btnExport">Backup (JSON)</button>
+      <button class="btn" id="btnImport">Pulihkan</button>
+      <button class="btn" id="btnCsv">Unduh CSV</button>
+      <button class="btn hidden" id="btnInstall">Pasang aplikasi</button>
+    </div>
+    <input type="file" id="file" accept="application/json,.json" hidden>
+    <div class="note" id="iosNote" hidden>iPhone/iPad: buka lewat Safari, tekan tombol Bagikan, lalu pilih <b>Tambah ke Layar Utama</b>.</div>
+    <div class="btns" style="margin-top:18px">
+      <button class="btn danger" id="btnReset">Reset progres</button>
+      <button class="btn primary" id="btnClose">Selesai</button>
+    </div>
+    <div class="note">Judul diurutkan selang-seling antar pilar agar feed tetap bervariasi. Semua judul disiapkan untuk format Reels.</div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status"><span id="toastMsg"></span><button id="toastAct" class="hidden"></button></div>
+
+<script>
+const CATS = {"EG": {"name": "Engagement", "color": "#ff9ecb"}, "FD": {"name": "Finansial Dasar", "color": "#22e07a"}, "MS": {"name": "Mindset", "color": "#b794ff"}, "SY": {"name": "Syariah", "color": "#5eead4"}, "CR": {"name": "Crypto", "color": "#ffc65c"}, "SX": {"name": "Syariah x Crypto", "color": "#7cc8ff"}, "BG": {"name": "Budgeting", "color": "#a3e635"}, "UT": {"name": "Utang & Riba", "color": "#ff8a6b"}, "DP": {"name": "Dana Darurat & Proteksi", "color": "#67e8f9"}, "SH": {"name": "Side Hustle", "color": "#f0abfc"}};
+const DATA = [[1,"EG","Perkenalan albust.id: Belajar Uang Tanpa Ribet","R"],[2,"FD","Gaji Habis Sebelum Tanggal Tua? Cek 5 Kebocoran Ini","R"],[3,"MS","Mindset Miskin vs Mindset Kaya: Bedanya di Kebiasaan","R"],[4,"SY","Apa Itu Keuangan Syariah? Penjelasan untuk Awam","R"],[5,"CR","Apa Itu Cryptocurrency? Penjelasan Paling Simpel","R"],[6,"SX","Crypto Halal atau Haram? Ini Pandangan Para Ulama","R"],[7,"BG","Metode 50/30/20: Cara Pakai yang Benar","R"],[8,"UT","Utang Produktif vs Utang Konsumtif","R"],[9,"DP","Dana Darurat: Apa dan Kenapa Wajib Punya","R"],[10,"SH","10 Ide Side Hustle dari Rumah","R"],[11,"EG","Kenapa Kami Membuat Akun Ini (Cerita Kami)","R"],[12,"FD","Apa Itu Literasi Keuangan? Penjelasan Paling Simpel","R"],[13,"MS","\"Nanti Aja Nabung\": Kalimat yang Diam-diam Memiskinkan","R"],[14,"SY","Rukun dan Syarat Akad Jual Beli Menurut Fikih Muamalah","R"],[15,"CR","Bitcoin Itu Apa dan Kenapa Banyak Dibicarakan?","R"],[16,"SX","Fatwa MUI tentang Crypto: Rangkuman Ringkas","R"],[17,"BG","Budget Zero-Based: Setiap Rupiah Punya Tugas","R"],[18,"UT","Cara Menghitung Rasio Utang Maksimal 30%","R"],[19,"DP","Berapa Kali Gaji Dana Darurat yang Ideal?","R"],[20,"SH","Skill yang Bisa Dijadikan Uang di Era Digital","R"],[21,"EG","Topik Keuangan Apa yang Paling Ingin Kamu Pelajari? (Polling)","R"],[22,"FD","Aset vs Liabilitas: Bedanya Bikin Kamu Melek Uang","R"],[23,"MS","Kenapa Kamu Belum Kaya? Bukan Karena Gaji Kecil","R"],[24,"SY","Riba: Apa Sih Sebenarnya dan Kenapa Dilarang?","R"],[25,"CR","Blockchain: Buku Besar Digital yang Tidak Bisa Diubah","R"],[26,"SX","Crypto sebagai Mata Uang vs Komoditas dalam Fikih","R"],[27,"BG","Metode Amplop Digital untuk Anak Muda","R"],[28,"UT","Pinjol Legal vs Ilegal: Cara Membedakannya","R"],[29,"DP","Di Mana Menyimpan Dana Darurat yang Tepat?","R"],[30,"SH","Cara Memulai Freelance Tanpa Pengalaman","R"],[31,"EG","Mitos vs Fakta: Menabung Itu Pasti Aman","R"],[32,"FD","Inflasi Itu Maling Diam-diam, Begini Cara Kerjanya","R"],[33,"MS","5 Kebiasaan Pagi Orang yang Melek Finansial","R"],[34,"SY","Gharar dan Maysir: Dua Istilah yang Sering Terlewat","R"],[35,"CR","Bedanya Bitcoin, Ethereum, dan Altcoin","R"],[36,"SX","Kenapa Ulama Berbeda Pendapat Soal Crypto?","R"],[37,"BG","Pos-pos Anggaran Wajib Setiap Bulan","R"],[38,"UT","Bahaya Pinjol Ilegal dan Cara Menghindarinya","R"],[39,"DP","Cara Membangun Dana Darurat dari Nol","R"],[40,"SH","Platform Freelance untuk Pemula","R"],[41,"EG","Mitos vs Fakta: Crypto Pasti Haram","R"],[42,"FD","Kenapa Uang 1 Juta Hari Ini Tak Sama dengan 1 Juta 10 Tahun Lagi","R"],[43,"MS","Delayed Gratification: Rahasia Menunda Demi Hasil Besar","R"],[44,"SY","Akad Mudharabah Dijelaskan dengan Contoh Sehari-hari","R"],[45,"CR","Apa Itu Stablecoin dan Kenapa Harganya Stabil?","R"],[46,"SX","Unsur Gharar dalam Crypto: Di Mana Letaknya?","R"],[47,"BG","Cara Membuat Budget dalam 10 Menit","R"],[48,"UT","Jerat Paylater: Awalnya Mudah, Akhirnya Menumpuk","R"],[49,"DP","Dana Darurat untuk Lajang vs Berkeluarga","R"],[50,"SH","Cara Menentukan Harga Jasa Freelance","R"],[51,"EG","Mitos vs Fakta: Investasi Itu untuk Orang Kaya","R"],[52,"FD","Cashflow Itu Raja: Cara Mencatat Uang Masuk dan Keluar","R"],[53,"MS","FOMO Bikin Dompet Bocor, Ini Cara Mengatasinya","R"],[54,"SY","Akad Musyarakah: Patungan Usaha Versi Syariah","R"],[55,"CR","Cara Kerja Mining dan Staking Secara Sederhana","R"],[56,"SX","Spekulasi dan Maysir: Batas antara Investasi dan Judi","R"],[57,"BG","Template Budget Bulanan Gratis","R"],[58,"UT","Bunga Kartu Kredit yang Tidak Disadari","R"],[59,"DP","Kapan Boleh Memakai Dana Darurat?","R"],[60,"SH","Cara Mendapatkan Klien Pertama","R"],[61,"EG","Mitos vs Fakta: Asuransi Cuma Buang Uang","R"],[62,"FD","Net Worth: Cara Hitung Kekayaan Bersihmu dalam 5 Menit","R"],[63,"MS","Gaya Hidup vs Masa Depan: Pilih yang Mana?","R"],[64,"SY","Murabahah: Kenapa KPR Syariah Berbeda?","R"],[65,"CR","Proof of Work vs Proof of Stake","R"],[66,"SX","Trading Crypto dengan Leverage: Pandangan Syariah","R"],[67,"BG","Aplikasi Pencatat Keuangan: Mana yang Cocok?","R"],[68,"UT","Cara Melunasi Utang: Snowball vs Avalanche","R"],[69,"DP","Dana Darurat Disalahgunakan? 4 Tanda Kamu Salah Pakai","R"],[70,"SH","Jualan Online dari Nol: Langkah Awal","R"],[71,"EG","Mitos vs Fakta: Hemat Berarti Pelit","R"],[72,"FD","Kebutuhan vs Keinginan: Cara Bedain Tanpa Drama","R"],[73,"MS","Lifestyle Creep: Gaji Naik, Tabungan Tetap Nol","R"],[74,"SY","Ijarah: Sewa-menyewa dalam Islam","R"],[75,"CR","Wallet Crypto: Hot Wallet vs Cold Wallet","R"],[76,"SX","Margin dan Riba dalam Futures: Apa yang Perlu Dicek?","R"],[77,"BG","Spreadsheet Keuangan Sederhana: Cara Membuatnya","R"],[78,"UT","Cara Melunasi Utang Kartu Kredit dengan Strategi Terarah","R"],[79,"DP","Dana Darurat Habis, Apa yang Harus Dilakukan?","R"],[80,"SH","Dropship dan Reseller: Untung Rugi Sebenarnya","R"],[81,"EG","Tebak Harga: Berapa Biaya Hidup Sebenarnya di Kotamu?","R"],[82,"FD","Bunga Majemuk: Keajaiban yang Sering Diremehkan","R"],[83,"MS","Jangan Bandingkan Hidupmu dengan Feed Orang Lain","R"],[84,"SY","Wadiah vs Mudharabah di Tabungan Syariah","R"],[85,"CR","Private Key dan Seed Phrase: Jangan Pernah Dibagikan","R"],[86,"SX","Staking dalam Kacamata Syariah: Antara Imbal Hasil dan Riba","R"],[87,"BG","Bayar Diri Sendiri Dulu: Prinsip Pay Yourself First","R"],[88,"UT","Gali Lubang Tutup Lubang: Cara Keluar dari Siklusnya","R"],[89,"DP","Asuransi Kesehatan: Kenapa Penting Sejak Muda","R"],[90,"SH","Jualan Produk Digital: Template, Ebook, dan Preset","R"],[91,"EG","Kuis Keuangan: Seberapa Melek Uang Kamu?","R"],[92,"FD","Aturan 72: Hitung Kapan Uangmu Berlipat Ganda","R"],[93,"MS","Flexing Itu Mahal, Percaya Deh","R"],[94,"SY","Zakat Penghasilan: Cara Hitung yang Mudah","R"],[95,"CR","Exchange Crypto Terdaftar di Bappebti/OJK: Cara Cek","R"],[96,"SX","Lending Crypto dan Bunga: Perhatikan Akadnya","R"],[97,"BG","Auto-debit Tabungan: Cara Menabung Tanpa Ingat","R"],[98,"UT","Cicilan 0%: Benarkah Tanpa Bunga?","R"],[99,"DP","BPJS Kesehatan vs Asuransi Swasta: Bedanya?","R"],[100,"SH","Menjual Ebook Keuangan: Cara Memulainya","R"],[101,"EG","Kuis Mindset: Kamu Tipe Penabung atau Penghambur?","R"],[102,"FD","7 Istilah Keuangan yang Wajib Kamu Tahu","R"],[103,"MS","Cara Berhenti Membeli Barang Demi Gengsi","R"],[104,"SY","Nisab Zakat Emas dan Penghasilan: Cek Ketentuan Terbarunya","R"],[105,"CR","Cara Membuka Akun Exchange Crypto dengan Aman","R"],[106,"SX","Yield Farming dalam Fikih Muamalah: Hal yang Perlu Dikaji","R"],[107,"BG","Tabungan Berjenjang: Mulai dari Rp5.000 Sehari","R"],[108,"UT","Cicilan HP Baru: Hitung Total Biayanya","R"],[109,"DP","Asuransi Jiwa: Siapa yang Benar-benar Butuh?","R"],[110,"SH","Bisnis Modal Kecil di Bawah 1 Juta","R"],[111,"EG","Kuis Syariah: Benar atau Salah?","R"],[112,"FD","Tujuan Keuangan SMART: Dari Mimpi Jadi Angka","R"],[113,"MS","Self-reward Boleh, Asal Punya Aturan","R"],[114,"SY","Zakat Mal: Kapan Wajib dan Berapa Besarnya?","R"],[115,"CR","Volatilitas: Kenapa Crypto Naik Turun Ekstrem","R"],[116,"SX","Stablecoin dan Pandangan Syariah","R"],[117,"BG","Tantangan Menabung 52 Minggu","R"],[118,"UT","Cara Cek SLIK OJK Secara Gratis","R"],[119,"DP","Asuransi Jiwa Berjangka vs Unit Link","R"],[120,"SH","Bisnis Kuliner Rumahan: Hitung Modal dan Margin","R"],[121,"EG","Kuis Crypto: Tebak Istilahnya","R"],[122,"FD","Cara Baca Slip Gaji Tanpa Bingung","R"],[123,"MS","Uang Bukan Segalanya, Tapi Kamu Perlu Paham Uang","R"],[124,"SY","Infak, Sedekah, dan Wakaf: Bedanya Apa?","R"],[125,"CR","Market Cap: Cara Membaca Ukuran Sebuah Koin","R"],[126,"SX","Bitcoin Mining dan Pandangan Ulama","R"],[127,"BG","Tantangan Tanpa Jajan 7 Hari","R"],[128,"UT","Skor Kredit: Apa dan Bagaimana Memperbaikinya","R"],[129,"DP","Cara Menghitung Uang Pertanggungan yang Pas","R"],[130,"SH","Cara Menghitung Harga Pokok Penjualan (HPP)","R"],[131,"EG","Fill in the Blank: Lengkapi Prinsip Keuangan Ini","R"],[132,"FD","Pajak untuk Pemula: PPh 21 Versi Santai","R"],[133,"MS","Kenapa Kita Takut Bicara Soal Uang?","R"],[134,"SY","Wakaf Produktif: Sedekah yang Terus Mengalir","R"],[135,"CR","Jangan Tergiur Harga Koin Murah: Ini Alasannya","R"],[136,"SX","Aset Digital sebagai Mal (Harta) dalam Islam","R"],[137,"BG","No Spend Challenge: Aturan Mainnya","R"],[138,"UT","Tips Negosiasi Keringanan Cicilan","R"],[139,"DP","Istilah Asuransi yang Wajib Kamu Pahami","R"],[140,"SH","Pisahkan Uang Pribadi dan Uang Usaha","R"],[141,"EG","This or That: Sisi Keuangan Versi Kamu","R"],[142,"FD","Apa Itu Likuiditas? Kenapa Penting Banget","R"],[143,"MS","Pengalaman Masa Kecil dan Cara Kamu Memakai Uang Sekarang","R"],[144,"SY","Sedekah Itu Mengurangi Harta? Logika dan Keimanannya","R"],[145,"CR","Supply dan Tokenomics: Kenapa Penting Dipelajari","R"],[146,"SX","Syarat Sesuatu Dianggap Harta Bernilai dalam Fikih","R"],[147,"BG","Cara Hemat Tanpa Terasa Menderita","R"],[148,"UT","Restrukturisasi Utang: Kapan Layak Dicoba?","R"],[149,"DP","Premi, Klaim, Polis, dan Manfaat: Semua Dijelaskan","R"],[150,"SH","Pembukuan Sederhana untuk UMKM","R"],[151,"EG","Tantangan 7 Hari Catat Pengeluaran Bareng albust.id","R"],[152,"FD","Deposito vs Tabungan vs Reksa Dana: Bedanya Apa?","R"],[153,"MS","Scarcity Mindset: Kenapa Selalu Merasa Kurang","R"],[154,"SY","Rezeki Halal dan Berkah: Apa yang Perlu Kamu Pahami?","R"],[155,"CR","Halving Bitcoin: Apa dan Kenapa Disorot?","R"],[156,"SX","Kriteria Proyek Crypto yang Lebih Aman Secara Syariah (Edukasi)","R"],[157,"BG","Hemat Makan Harian: Strategi Meal Prep","R"],[158,"UT","Utang ke Teman dan Keluarga: Aturan Mainnya","R"],[159,"DP","Cara Mengajukan Klaim Asuransi Tanpa Ditolak","R"],[160,"SH","Cara Mengelola Cashflow Usaha Kecil","R"],[161,"EG","Tantangan 30 Hari Bebas Jajan Impulsif","R"],[162,"FD","Reksa Dana untuk Pemula: Mulai dari Mana?","R"],[163,"MS","Abundance Mindset Versi Realistis (Bukan Cuma Afirmasi)","R"],[164,"SY","Harta dalam Islam: Amanah, Bukan Sekadar Milik","R"],[165,"CR","Apa Itu NFT? Masihkah Relevan?","R"],[166,"SX","Cara Menyaring Koin: Utilitas Nyata vs Murni Spekulasi","R"],[167,"BG","Menekan Pengeluaran Langganan Digital","R"],[168,"UT","Pinjam Uang Tanpa Merusak Hubungan","R"],[169,"DP","Penyebab Klaim Asuransi Sering Ditolak","R"],[170,"SH","Cara Naik Gaji: Strategi Negosiasi","R"],[171,"EG","Tantangan 21 Hari Menabung Konsisten","R"],[172,"FD","Saham Itu Apa Sih? Penjelasan untuk Anak Baru","R"],[173,"MS","Konsisten Lebih Penting dari Besar","R"],[174,"SY","Prinsip Qanaah dan Ikhtiar dalam Mengelola Uang","R"],[175,"CR","Apa Itu DeFi? Penjelasan untuk Pemula","R"],[176,"SX","Zakat Crypto: Apakah Wajib dan Bagaimana Menghitungnya?","R"],[177,"BG","Audit Langganan: Cek yang Tidak Terpakai","R"],[178,"UT","Menagih Utang dengan Bijak Tanpa Drama","R"],[179,"DP","Asuransi Kendaraan: All Risk vs TLO","R"],[180,"SH","Cara Meminta Kenaikan Gaji dengan Percaya Diri","R"],[181,"EG","Ceritakan Kesalahan Keuanganmu di Komentar","R"],[182,"FD","Obligasi dan Sukuk: Bedanya Apa?","R"],[183,"MS","Satu Persen Lebih Baik Tiap Hari untuk Keuanganmu","R"],[184,"SY","Israf dan Tabdzir: Batas Boros dalam Islam","R"],[185,"CR","Apa Itu DAO dan Cara Kerjanya","R"],[186,"SX","Zakat Aset Digital: Pendapat Lembaga Zakat","R"],[187,"BG","Belanja Bulanan Hemat: Daftar Belanja Cerdas","R"],[188,"UT","Utang Orang Tua dan Peran Anak: Batasnya di Mana?","R"],[189,"DP","Asuransi Rumah: Perlu Atau Tidak?","R"],[190,"SH","Cara Menjawab Pertanyaan Ekspektasi Gaji","R"],[191,"EG","Tanya Jawab Pengikut: Jawab 5 Pertanyaan Terpopuler","R"],[192,"FD","Emas: Investasi atau Sekadar Simpanan?","R"],[193,"MS","Bangun Disiplin Finansial Tanpa Paksaan","R"],[194,"SY","Menabung dalam Pandangan Islam","R"],[195,"CR","Layer 1 dan Layer 2: Analogi Jalan Tol","R"],[196,"SX","Crypto Bukan Alat Pembayaran Sah di Indonesia: Penjelasannya","R"],[197,"BG","Belanja Impulsif: Teknik Menghentikannya","R"],[198,"UT","Utang untuk Gaya Hidup: Alarm yang Perlu Dikenali","R"],[199,"DP","Asuransi Perjalanan: Kapan Layak Dibeli","R"],[200,"SH","Upskilling: Belajar Apa untuk Menambah Penghasilan?","R"],[201,"EG","Sesi AMA Keuangan di Story","R"],[202,"FD","Diversifikasi: Jangan Taruh Semua Telur di Satu Keranjang","R"],[203,"MS","Motivasi Cepat Hilang, Sistem yang Bertahan","R"],[204,"SY","Dana Darurat dalam Perspektif Syariah","R"],[205,"CR","Gas Fee: Biaya Transaksi di Blockchain","R"],[206,"SX","Perbedaan Bappebti dan OJK soal Aset Kripto","R"],[207,"BG","Cara Pakai Promo Tanpa Boros","R"],[208,"UT","KPR: Hal yang Wajib Dihitung Sebelum Mengambil","R"],[209,"DP","Proteksi untuk Pencari Nafkah Utama","R"],[210,"SH","Sertifikasi yang Bisa Menaikkan Nilai Jualmu","R"],[211,"EG","Rekomendasi Buku Keuangan Pilihan Kami","R"],[212,"FD","Risiko vs Return: Hubungan yang Tak Bisa Dipisah","R"],[213,"MS","Habit Stacking untuk Menabung Otomatis","R"],[214,"SY","Asuransi Syariah (Takaful): Cara Kerjanya","R"],[215,"CR","Apa Itu Smart Contract?","R"],[216,"SX","Cara Menjelaskan Crypto ke Orang Tua yang Religius","R"],[217,"BG","Cashback dan Poin: Untung atau Jebakan?","R"],[218,"UT","Cicilan Motor dan Mobil: Hitung Biaya Sebenarnya","R"],[219,"DP","Proteksi Diri Saat Menjadi Freelancer","R"],[220,"SH","Personal Branding untuk Karier dan Bisnis","R"],[221,"EG","Rangkuman Mingguan: 5 Pelajaran Minggu Ini","R"],[222,"FD","Profil Risiko: Kamu Tipe Konservatif atau Agresif?","R"],[223,"MS","Belajar dari Kegagalan Finansial: Cerita dan Pelajarannya","R"],[224,"SY","Bank Syariah vs Bank Konvensional: Perbedaan Mendasar","R"],[225,"CR","Airdrop: Peluang atau Jebakan?","R"],[226,"SX","Takut Riba, Tapi Tertarik Crypto? Pahami Ini Dulu","R"],[227,"BG","Biaya Transportasi Online: Cara Menekannya","R"],[228,"UT","Sewa vs Beli Rumah: Mana yang Lebih Masuk Akal?","R"],[229,"DP","Rencana Keuangan Saat Kehilangan Pekerjaan","R"],[230,"SH","Membangun Audiens di Media Sosial Sejak Awal","R"],[231,"EG","Rangkuman Bulanan: Apa yang Sudah Kita Pelajari?","R"],[232,"FD","Cara Cek Legalitas Investasi di OJK","R"],[233,"MS","Rugi Itu Biasa, Yang Bahaya Adalah Tidak Belajar","R"],[234,"SY","Apa Itu DSN-MUI dan Fatwanya dalam Keuangan?","R"],[235,"CR","Rugpull: Cara Kerja Penipuan dan Ciri-cirinya","R"],[236,"SX","Spot Trading vs Futures: Mana Lebih Dekat ke Prinsip Syariah?","R"],[237,"BG","Menghemat Listrik dan Air: Berapa Besar Dampaknya?","R"],[238,"UT","Refinancing KPR: Perlu atau Tidak?","R"],[239,"DP","Bertahan 6 Bulan Tanpa Gaji: Skenario dan Strateginya","R"],[240,"SH","Cara Monetisasi Media Sosial yang Realistis","R"],[241,"EG","Behind the Scene: Cara Kami Membuat Konten","R"],[242,"FD","Ciri-ciri Investasi Bodong yang Wajib Diwaspadai","R"],[243,"MS","Mental Block Soal Uang: 7 Kalimat yang Harus Kamu Ganti","R"],[244,"SY","Reksa Dana Syariah: Apa yang Membedakan?","R"],[245,"CR","Pump and Dump: Jangan Jadi Korban Berikutnya","R"],[246,"SX","Jual Beli Crypto: Syarat Sah Menurut Muamalah","R"],[247,"BG","Tips Hemat Saat Tinggal di Kos","R"],[248,"UT","Cara Menghitung Bunga Flat vs Efektif","R"],[249,"DP","Dokumen Keuangan Penting yang Harus Disimpan","R"],[250,"SH","Jadi Content Creator: Persiapan Mental dan Finansial","R"],[251,"EG","Ajak Pengikut Berbagi Cerita: Dari Boncos ke Terkendali","R"],[252,"FD","Kenapa Orang Pintar Tetap Bisa Kena Tipu Investasi","R"],[253,"MS","Ubah Kalimat \"Saya Tidak Mampu\" Jadi Pertanyaan Ini","R"],[254,"SY","Saham Syariah dan Daftar Efek Syariah (DES): Cara Cek","R"],[255,"CR","Scam Giveaway di Media Sosial: Cara Mengenali","R"],[256,"SX","Prinsip Qabdh (Serah Terima) pada Aset Digital","R"],[257,"BG","Anggaran Hidup Mahasiswa: Contoh Realistis","R"],[258,"UT","Denda Keterlambatan: Biaya Mahal yang Sering Diabaikan","R"],[259,"DP","Daftar Aset untuk Keluarga: Siapkan dari Sekarang","R"],[260,"SH","Afiliasi: Cara Kerja dan Cara Mulainya","R"],[261,"EG","Bagikan Perubahan Keuangan Pengikut (Dengan Izin Mereka)","R"],[262,"FD","Gaji UMR Bisa Punya Aset? Ini Simulasinya","R"],[263,"MS","Cara Berpikir Jangka Panjang di Dunia Serba Instan","R"],[264,"SY","Kriteria Saham Syariah: Apa yang Disaring?","R"],[265,"CR","Phishing Crypto: 7 Tanda Link Palsu","R"],[266,"SX","Akad Jual Beli di Exchange: Bagaimana Mekanismenya?","R"],[267,"BG","Anggaran Hidup Gaji 3 Juta","R"],[268,"UT","Cara Hidup Bebas Utang Bertahap","R"],[269,"DP","Kenapa Perlu Membuat Wasiat dan Daftar Akun Digital","R"],[270,"SH","Passive Income: Mitos dan Realitanya","R"],[271,"EG","Fakta Unik Seputar Uang di Dunia","R"],[272,"FD","Simulasi Menabung 500 Ribu per Bulan Selama 10 Tahun","R"],[273,"MS","Digital Detox untuk Dompetmu: Kurangi Belanja Online Impulsif","R"],[274,"SY","Sukuk: Obligasi Versi Syariah","R"],[275,"CR","Keamanan Akun Crypto: 2FA dan Kebiasaan Wajib","R"],[276,"SX","Halalkah Airdrop? Pandangan Singkat","R"],[277,"BG","Anggaran Hidup Gaji 5 Juta","R"],[278,"UT","Tanda-tanda Kamu Sudah Terlalu Banyak Berutang","R"],[279,"DP","Keamanan Rekening dari Penipuan Online","R"],[280,"SH","Passive Income Butuh Kerja Keras di Awal","R"],[281,"EG","Sejarah Uang: Dari Barter hingga Digital","R"],[282,"FD","Cara Menghitung Dana yang Kamu Butuhkan untuk Pensiun","R"],[283,"MS","Algoritma Marketplace Itu Jago Banget Bikin Kamu Belanja","R"],[284,"SY","Emas dalam Fikih Muamalah: Hal yang Perlu Diperhatikan","R"],[285,"CR","Cara Menyimpan Aset Crypto dengan Aman","R"],[286,"SX","NFT dalam Perspektif Syariah","R"],[287,"BG","Anggaran Hidup Gaji 8 Juta","R"],[288,"UT","Mengelola Stres Akibat Utang","R"],[289,"DP","Modus Penipuan Terbaru: Cara Mengenali","R"],[290,"SH","Income Stream Ganda: Cara Membangunnya Bertahap","R"],[291,"EG","Sejarah Dinar dan Dirham","R"],[292,"FD","Dana Pensiun: Kenapa Harus Dipikirkan Dari Sekarang","R"],[293,"MS","Dopamin dan Belanja: Kenapa Checkout Terasa Menyenangkan","R"],[294,"SY","Jual Beli Emas Cicil: Bagaimana Pandangan Ulama?","R"],[295,"CR","DCA Crypto: Apa Itu dan Bagaimana Cara Kerjanya?","R"],[296,"SX","DeFi dan Prinsip Muamalah: Apa Tantangannya?","R"],[297,"BG","Anggaran Hidup Gaji 15 Juta","R"],[298,"UT","Utang Konsumtif Anak Muda: Data dan Realitanya","R"],[299,"DP","Link APK Palsu: Jangan Klik Sembarangan","R"],[300,"SH","Jangan Ikut Bisnis MLM Tanpa Cek Ini","R"],[301,"EG","Sejarah Krisis Moneter 1998: Pelajaran untuk Kita","R"],[302,"FD","BPJS Ketenagakerjaan: JHT, JP, JKK, Apa Bedanya?","R"],[303,"MS","Jebakan Diskon 90%: Hemat atau Justru Boros?","R"],[304,"SY","Pegadaian Syariah: Skema Rahn dan Ijarah","R"],[305,"CR","Cara Kerja Order Book: Market vs Limit Order","R"],[306,"SX","Token Berbasis Emas (Gold-backed): Bagaimana Pandangan Syariah?","R"],[307,"BG","Anggaran untuk Pasangan dengan Dua Penghasilan","R"],[308,"UT","Riba: Bentuk-bentuknya dalam Transaksi Modern","R"],[309,"DP","OTP Jangan Dibagikan: Pelajaran dari Korban Penipuan","R"],[310,"SH","Ciri Skema Ponzi dan Piramida","R"],[311,"EG","Sejarah Bitcoin: Dari Pizza hingga Perhatian Dunia","R"],[312,"FD","Kartu Debit vs Kartu Kredit vs Paylater","R"],[313,"MS","Aturan 24 Jam Sebelum Membeli Sesuatu","R"],[314,"SY","Utang dalam Islam: Adab Berutang dan Melunasi","R"],[315,"CR","Candlestick untuk Pemula: Cara Membacanya","R"],[316,"SX","Crypto vs Emas: Perbandingan dari Sisi Syariah dan Risiko","R"],[317,"BG","Anggaran Keluarga dengan Anak Kecil","R"],[318,"UT","Riba Jahiliyah vs Riba Fadhl: Penjelasan Singkat","R"],[319,"DP","Cara Mengamankan m-Banking","R"],[320,"SH","Kerja Sampingan Saat Masih Kuliah","R"],[321,"EG","Quotes Keuangan yang Mengubah Cara Pandangku","R"],[322,"FD","Cara Kerja Bank Digital dan Apakah Aman?","R"],[323,"MS","Cara Menolak Ajakan Nongkrong Tanpa Merasa Bersalah","R"],[324,"SY","Menunda Pembayaran Utang Padahal Mampu: Bagaimana Islam Memandangnya?","R"],[325,"CR","Support dan Resistance dalam Bahasa Sederhana","R"],[326,"SX","Kenapa Hindari \"Get Rich Quick\" dalam Perspektif Islam","R"],[327,"BG","Cara Menabung untuk Beli Rumah","R"],[328,"UT","Alternatif Pembiayaan Syariah untuk Kebutuhan Mendesak","R"],[329,"DP","Cara Melapor Jika Menjadi Korban Penipuan","R"],[330,"SH","Side Hustle untuk Ibu Rumah Tangga","R"],[331,"EG","Quote Islami tentang Rezeki dan Usaha","R"],[332,"FD","Jangan Cuma Cari Bunga Tinggi: Cek Dulu Ini di Bank Digital","R"],[333,"MS","Lingkungan yang Salah Bisa Menguras Dompetmu","R"],[334,"SY","Paylater dalam Kacamata Syariah: Apa yang Perlu Dicek?","R"],[335,"CR","Analisis Fundamental vs Teknikal di Crypto","R"],[336,"SX","Tawakal dan Manajemen Risiko dalam Berinvestasi","R"],[337,"BG","Menabung untuk Kendaraan Tanpa Cicilan","R"],[338,"UT","Qardh Hasan: Pinjaman Kebajikan dalam Islam","R"],[339,"DP","Bahaya Menyimpan Semua Uang di Satu Rekening","R"],[340,"SH","Side Hustle untuk Karyawan Kantoran","R"],[341,"EG","Meme Keuangan Relatable: Siapa yang Merasa?","R"],[342,"FD","Biaya Admin yang Diam-diam Menggerus Saldomu","R"],[343,"MS","Lingkaran Pertemanan dan Kondisi Finansialmu","R"],[344,"SY","Kartu Kredit Syariah: Bagaimana Skemanya?","R"],[345,"CR","Cara Riset Proyek Crypto Sebelum Memutuskan","R"],[346,"SX","Niat Mencari Rezeki dan Etika Bertransaksi Digital","R"],[347,"BG","Menabung untuk Liburan: Rumus Sederhana","R"],[348,"UT","Berdoa dan Berikhtiar Saat Terlilit Utang","R"],[349,"DP","LPS: Batas Simpanan yang Dijamin","R"],[350,"SH","Cara Membagi Waktu Antara Kerja dan Side Hustle","R"],[351,"EG","Hari Gajian vs Hari Tanggal Tua (Relatable)","R"],[352,"FD","Cara Membaca Laporan Keuangan Pribadi","R"],[353,"MS","Belajar Finansial Itu Maraton, Bukan Sprint","R"],[354,"SY","KPR Syariah: Cara Kerja dan Hal yang Wajib Ditanyakan","R"],[355,"CR","Whitepaper: Cara Membaca Tanpa Pusing","R"],[356,"SX","Etika Influencer Keuangan Muslim: Jangan Menjanjikan Profit","R"],[357,"BG","Dana Pernikahan: Rencana Keuangan 2 Tahun","R"],[358,"UT","Amanah Melunasi Utang Sebelum Wafat","R"],[359,"DP","Aman Tidaknya Bank Digital: Cek Pengawasan","R"],[360,"SH","Burnout karena Terlalu Banyak Side Hustle: Cara Mencegah","R"],[361,"EG","POV: Kamu Baru Sadar Punya Langganan yang Terlupakan","R"],[362,"FD","Rasio Keuangan Sehat: 5 Angka yang Harus Kamu Pantau","R"],[363,"MS","Buku Keuangan untuk Pemula (Versi Ringkas)","R"],[364,"SY","Dropship dan Reseller dalam Fikih Jual Beli","R"],[365,"CR","Narasi Crypto: Kenapa Tren Bisa Berubah Cepat","R"],[366,"SX","Hati-hati Slogan \"Crypto Syariah\": Cek Dulu Sumbernya","R"],[367,"BG","Dana Pendidikan Anak: Dari Mana Mulai?","R"],[368,"UT","Pengelolaan Cicilan Syariah: Hal yang Perlu Dicek","R"],[369,"DP","Cara Mengamankan Data Pribadi untuk Pinjaman","R"],[370,"SH","Kenapa Banyak Bisnis Kecil Gagal di Tahun Pertama","R"],[371,"EG","Kesalahan Paling Sering Orang Lakukan Saat Menabung","R"],[372,"FD","Kenapa Hidup Hemat Saja Tidak Cukup Bikin Kaya","R"],[373,"MS","Channel dan Podcast Belajar Finansial yang Layak Diikuti","R"],[374,"SY","Jual Beli Online dan Prinsip Kejujuran dalam Islam","R"],[375,"CR","Altseason, Bull Run, dan Bear Market: Istilah Dasar","R"],[376,"SX","Cara Bertanya ke Dewan Pengawas Syariah atau Ustaz yang Kompeten","R"],[377,"BG","Memetakan Pengeluaran Musiman Sepanjang Tahun","R"],[378,"UT","Arisan: Aman atau Berisiko? Pahami Skemanya","R"],[379,"DP","Menghadapi Krisis Ekonomi: Persiapan Praktis","R"],[380,"SH","Pelajaran dari Bisnis yang Gagal","R"],[381,"EG","Bahasa Keuangan Sehari-hari: Kamus Mini albust.id","R"],[382,"FD","Income vs Wealth: Penghasilan Besar Belum Tentu Kaya","R"],[383,"MS","10 Pertanyaan untuk Mengenal Dirimu dan Uangmu","R"],[384,"SY","Warisan dan Perencanaan Keuangan Keluarga Muslim","R"],[385,"CR","Leverage dan Futures: Kenapa Sangat Berisiko","R"],[386,"SX","Fatwa Berbeda-beda: Bagaimana Menyikapinya?","R"],[387,"BG","Sinking Fund: Dana Khusus untuk Pengeluaran Tahunan","R"],[388,"UT","Koperasi Simpan Pinjam: Cara Memilih yang Terpercaya","R"],[389,"DP","Resesi: Apa Artinya bagi Dompetmu","R"],[390,"SH","Cara Mengelola Pajak Freelancer dan UMKM","R"],[391,"EG","Glossary Crypto: A sampai Z Versi Singkat","R"],[392,"FD","Cara Meningkatkan Penghasilan Tanpa Mengorbankan Waktu","R"],[393,"MS","Mimpi Besar, Langkah Kecil: Mulai dari Rp10.000","R"],[394,"SY","Wasiat dan Hibah: Bedanya Apa?","R"],[395,"CR","Likuidasi: Kisah Trader yang Habis dalam Sekejap","R"],[396,"SX","Ikhtilaf Ulama dan Sikap Bijak Kita","R"],[397,"BG","Cara Mengatur Gaji di Tanggal Muda","R"],[398,"UT","Tips Menghadapi Debt Collector yang Mengintimidasi","R"],[399,"DP","Cara Mengamankan Keuangan Saat Harga Naik","R"],[400,"SH","Cara Mengelola Penghasilan Tidak Tetap","R"],[401,"EG","Glossary Syariah: Istilah-Istilah Dasar","R"],[402,"FD","Money Date: Rutinitas 30 Menit yang Mengubah Keuanganmu","R"],[403,"MS","Syukur dan Ambisi Bisa Berjalan Bersama","R"],[404,"SY","Nafkah Keluarga dan Pembagian Peran Finansial","R"],[405,"CR","Pajak Crypto di Indonesia: Yang Perlu Kamu Tahu","R"],[406,"SX","Crypto untuk Sedekah dan Donasi: Mekanismenya","R"],[407,"BG","Gajian Hari Ini, Lakukan 5 Hal Ini Dulu","R"],[408,"UT","Hak Konsumen saat Berutang: Yang Perlu Kamu Tahu","R"],[409,"DP","Bertahan Saat PHK: Langkah 30 Hari Pertama","R"],[410,"SH","Naikkan Nilai Diri Lebih Dulu Sebelum Menaikkan Harga","R"],[411,"EG","Cheat Sheet Keuangan: Simpan dan Bagikan","R"],[412,"FD","Review Keuangan Bulanan: Template yang Bisa Kamu Salin","R"],[413,"MS","Cukup Itu Berapa? Menentukan Garis Cukup Versimu","R"],[414,"SY","Mahar dan Biaya Pernikahan: Bijak Mengaturnya","R"],[415,"CR","Regulasi Crypto di Indonesia: Siapa yang Mengawasi?","R"],[416,"SX","Wakaf Aset Digital: Konsepnya","R"],[417,"BG","Cara Bertahan di Akhir Bulan Tanpa Utang","R"],[418,"UT","Pinjaman untuk Usaha: Hitung Kelayakan Dulu","R"],[419,"DP","Cara Menyiapkan Dana untuk Orang Tua Sakit","R"],[420,"SH","Skill Komunikasi dan Pengaruhnya pada Penghasilan","R"],[421,"EG","Bagikan ke Temanmu yang Sering Boros","R"],[422,"FD","Checklist Keuangan Sebelum Usia 25","R"],[423,"MS","Kaya Waktu vs Kaya Uang: Mana yang Kamu Kejar?","R"],[424,"SY","Haji dan Umrah: Cara Menabung yang Terencana","R"],[425,"CR","Bitcoin sebagai Digital Gold: Benarkah?","R"],[426,"SX","Blockchain untuk Transparansi Zakat dan Wakaf","R"],[427,"BG","Pengeluaran Tersembunyi yang Sering Terlupakan","R"],[428,"UT","Utang Kuliah dan Cicilan UKT: Strategi Pelunasan","R"],[429,"DP","Biaya Kesehatan Mendadak: Siapkan Pos Khusus","R"],[430,"SH","Cara Membaca Kontrak Kerja dan Kontrak Klien","R"],[431,"EG","Tag Orang yang Perlu Baca Ini","R"],[432,"FD","Checklist Keuangan Usia 30-an","R"],[433,"MS","Tujuan Hidup yang Membuat Menabung Terasa Ringan","R"],[434,"SY","Tabungan Haji vs Tabungan Biasa","R"],[435,"CR","Ethereum dan Ekosistemnya untuk Pemula","R"],[436,"SX","Teknologi Blockchain Itu Netral, Penggunaannya yang Perlu Dinilai","R"],[437,"BG","Cara Mengatur Uang Bulanan untuk Orang Tua","R"],[438,"UT","Cicilan vs Nabung Dulu: Mana Lebih Hemat?","R"],[439,"DP","Tabungan Anak: Instrumen dan Pertimbangannya","R"],[440,"SH","Cara Menolak Proyek yang Tidak Menguntungkan","R"],[441,"EG","Giveaway Edukasi: Ebook Keuangan Gratis","R"],[442,"FD","Keuangan Fresh Graduate: 6 Langkah Pertama","R"],[443,"MS","Mindset Pemilik vs Mindset Karyawan","R"],[444,"SY","Qurban Tanpa Drama: Menabung Setahun Sebelumnya","R"],[445,"CR","Mengenal Solana, BNB, dan XRP Secara Singkat","R"],[446,"SX","Crypto sebagai Mahar atau Hibah: Bagaimana Pandangannya?","R"],[447,"BG","Mengatur Keuangan Saat Merantau","R"],[448,"UT","Barang Impian Bisa Dibeli Tunai: Caranya","R"],[449,"DP","Asuransi Pendidikan: Layak atau Tidak?","R"],[450,"SH","Alat Gratis untuk Memulai Bisnis Online","R"],[451,"EG","Ajakan Join Komunitas albust.id","R"],[452,"FD","Keuangan Pasangan Baru Menikah: Obrolan yang Wajib Dilakukan","R"],[453,"MS","Kenapa Orang Tua Kita Takut Bicara Investasi","R"],[454,"SY","Ramadan dan Pengeluaran: Kenapa Sering Membengkak?","R"],[455,"CR","Central Bank Digital Currency (CBDC) vs Crypto","R"],[456,"SX","Warisan Aset Crypto: Cara Mewariskan Wallet","R"],[457,"BG","Kebiasaan Kecil yang Menghemat Jutaan per Tahun","R"],[458,"UT","Gaya Hidup Tanpa Cicilan: Mungkinkah?","R"],[459,"DP","Takaful Keluarga: Pilihan Proteksi Syariah","R"],[460,"SH","AI untuk Produktivitas dan Penghasilan Tambahan","R"],[461,"EG","Siapa yang Masih Percaya Janji Profit 10% Sebulan?","R"],[462,"FD","Cara Mengatur Uang Saat Penghasilan Tidak Tetap","R"],[463,"MS","Memutus Rantai Kemiskinan Keluarga: Mulai dari Kamu","R"],[464,"SY","THR Datang, Bijak Kelola dengan Cara Ini","R"],[465,"CR","Rupiah Digital: Apa Bedanya dengan Bitcoin?","R"],[466,"SX","Seed Phrase dan Amanah Keluarga","R"],[467,"BG","Mengubah Barang Tak Terpakai Jadi Uang","R"],[468,"UT","Strategi 90 Hari Mengurangi Utang","R"],[469,"DP","Mitigasi Risiko Keuangan dalam 5 Langkah","R"],[470,"SH","Cara Belajar Skill Baru dalam 30 Hari","R"],[471,"EG","Kontroversi Keuangan Minggu Ini: Pendapat Kami","R"],[472,"FD","Kenapa Uang Receh Tiap Hari Bisa Jadi Jutaan","R"],[473,"MS","Jadi Generasi Sandwich Tanpa Kehilangan Dirimu","R"],[474,"SY","Maqashid Syariah dan Tujuan Keuangan Hidupmu","R"],[475,"CR","Mitos dan Fakta Crypto yang Sering Beredar","R"],[476,"SX","Checklist Muslim Sebelum Membeli Crypto","R"],[477,"BG","Bikin Target Menabung yang Realistis","R"],[478,"UT","Perjalanan Keluar dari Jerat Pinjol: Langkah demi Langkah","R"],[479,"DP","Stress Test Keuanganmu: Simulasi Skenario Terburuk","R"],[480,"SH","Portofolio Kerja yang Menarik Klien","R"],[481,"EG","Pencapaian Bersama: Terima Kasih Sudah Belajar Bersama","R"],[482,"FD","Mengenal Instrumen Pasar Uang untuk Pemula","R"],[483,"MS","Kebebasan Finansial Itu Apa Sih Sebenarnya?","R"],[484,"SY","Ekonomi Syariah di Indonesia: Perkembangan dan Peluangnya","R"],[485,"CR","Berapa Porsi Crypto yang Wajar dalam Portofolio? (Edukasi, Bukan Saran)","R"],[486,"SX","5 Pertanyaan Sebelum Membeli Aset Crypto Versi Syariah","R"],[487,"BG","Cara Menjaga Konsistensi Menabung Selama 1 Tahun","R"],[488,"UT","Kesalahan Fatal Saat Mengajukan Pinjaman","R"],[489,"DP","Checklist Proteksi untuk Usia 20-an","R"],[490,"SH","Rencana 90 Hari Menambah Penghasilan Rp1 Juta","R"],[491,"EG","Rencana Konten Bulan Depan: Pilih Topikmu","R"],[492,"FD","Peta Keuangan: Dari Nol Sampai Mandiri Finansial","R"],[493,"MS","Pengingat Hari Ini: Kamu Sudah Memulai, Lanjutkan","R"],[494,"SY","Kesalahan Umum Soal Syariah yang Sering Dipahami Keliru","R"],[495,"CR","Kesalahan Pemula Crypto yang Paling Sering Terjadi","R"],[496,"SX","Syariah x Crypto: Peta Perdebatan dalam 60 Detik","R"],[497,"BG","Review Budget: Kapan Harus Diubah?","R"],[498,"UT","Checklist Sebelum Mengajukan Cicilan Apa Pun","R"],[499,"DP","Perisai Finansial: Rangkuman Dana Darurat hingga Asuransi","R"],[500,"SH","Dari Nol ke Penghasilan Kedua: Peta Perjalanan","R"]]; // [day, catKey, title, format]
+const FMT = {R:"Reels"};
+const TOTAL = DATA.length;
+const KEY = "albust_planner_v1";
+
+/* ---------- storage ---------- */
+let mem = null;
+function load(){
+  try{ const r = localStorage.getItem(KEY); if(r) return JSON.parse(r); }catch(e){}
+  return mem || null;
+}
+function save(){
+  mem = state;
+  try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){}
+}
+const pad = n => String(n).padStart(2,"0");
+const ymd = d => d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const parse = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d, 12); };
+const today = () => ymd(new Date());
+let state = load() || {done:{}, start: today()};
+if(!state.done) state.done = {};
+if(!state.start) state.start = today();
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmtDate = s => parse(s).toLocaleDateString("id-ID",{weekday:"short", day:"numeric", month:"short", year:"numeric"});
+const schedDate = day => { const d = parse(state.start); d.setDate(d.getDate() + day - 1); return ymd(d); };
+const isDone = day => !!state.done[day];
+
+let filter = {q:"", cat:"all", fmt:"all", st:"all"};
+let limit = 40;
+const PAGE = 40;
+
+/* ---------- icons ---------- */
+const I = {
+  check:'<svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>',
+  copy:'<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>'
+};
+
+/* ---------- stats / hero ---------- */
+function nextTodo(){ return DATA.find(r => !isDone(r[0])); }
+function doneCount(){ return DATA.reduce((n,r)=> n + (isDone(r[0])?1:0), 0); }
+function streak(){
+  const days = new Set(Object.values(state.done));
+  let d = new Date(); d.setHours(12);
+  if(!days.has(ymd(d))) d.setDate(d.getDate()-1);
+  let n = 0;
+  while(days.has(ymd(d))){ n++; d.setDate(d.getDate()-1); }
+  return n;
+}
+function renderStats(){
+  const done = doneCount(), left = TOTAL - done, p = Math.round(done/TOTAL*100);
+  $("#sDone").textContent = done;
+  $("#sLeft").textContent = left;
+  $("#sStreak").textContent = streak();
+  $("#pctNum").textContent = p + "%";
+  $("#pctSub").textContent = done + "/" + TOTAL;
+  $("#ringFg").style.strokeDashoffset = 263.9 * (1 - done/TOTAL);
+  // estimasi: 1 konten / hari mulai dari hari ini untuk sisa judul
+  if(left === 0){ $("#sEta").textContent = "Selesai"; }
+  else { const d = new Date(); d.setHours(12); d.setDate(d.getDate() + left - 1);
+    $("#sEta").textContent = d.toLocaleDateString("id-ID",{day:"numeric",month:"short",year:"2-digit"}); }
+}
+function chipCat(k){ const c = CATS[k]; return `<span class="chip"><i style="background:${c.color}"></i>${esc(c.name)}</span>`; }
+function chipFmt(f){ return `<span class="chip f-${f}">${FMT[f]}</span>`; }
+
+function renderHero(){
+  const el = $("#hero");
+  const r = nextTodo();
+  if(!r){
+    el.innerHTML = `<div class="eyebrow">Selesai</div>
+      <h2 class="hero-title">Semua 500 judul sudah dibuat. Luar biasa konsisten!</h2>
+      <div class="hero-actions"><button class="btn" id="hReset">Mulai putaran baru</button></div>`;
+    $("#hReset").onclick = resetAll; return;
+  }
+  const [day,cat,title,f] = r, sd = schedDate(day), isToday = sd === today();
+  el.innerHTML = `
+    <div class="eyebrow"><b style="color:var(--g1)">${isToday ? "Hari ini" : "Berikutnya"}</b> • Hari ${day} • ${esc(fmtDate(sd))}</div>
+    <h2 class="hero-title">${esc(title)}</h2>
+    <div class="eyebrow" style="margin:-4px 0 14px">${chipCat(cat)} ${chipFmt(f)}</div>
+    <div class="hero-actions">
+      <button class="btn primary" data-act="done" data-day="${day}">${I.check} Tandai selesai</button>
+      <button class="btn" data-act="copy" data-day="${day}">${I.copy} Salin judul</button>
+    </div>`;
+}
+
+/* ---------- list ---------- */
+function matches(r){
+  const [day,cat,title,f] = r;
+  if(filter.cat !== "all" && cat !== filter.cat) return false;
+  if(filter.fmt !== "all" && f !== filter.fmt) return false;
+  if(filter.st === "done" && !isDone(day)) return false;
+  if(filter.st === "todo" && isDone(day)) return false;
+  if(filter.q){
+    const q = filter.q.toLowerCase();
+    const hay = (title+" "+CATS[cat].name+" "+FMT[f]+" hari "+day+" "+day).toLowerCase();
+    if(!hay.includes(q)) return false;
+  }
+  return true;
+}
+function hl(text){
+  const t = esc(text);
+  if(!filter.q) return t;
+  const q = esc(filter.q).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  try{ return t.replace(new RegExp("("+q+")","ig"),"<mark>$1</mark>"); }catch(e){ return t; }
+}
+function itemHTML(r, nextDay){
+  const [day,cat,title,f] = r, done = isDone(day), sd = schedDate(day);
+  const cls = "item" + (done?" done":"") + (!done && sd===today() ? " today":"");
+  const when = done ? "Dibuat " + fmtDate(state.done[day]) : (sd===today() ? "Jadwal: hari ini" : "Jadwal: " + fmtDate(sd));
+  return `<article class="${cls}" data-day="${day}">
+    <button class="check" data-act="toggle" data-day="${day}" aria-pressed="${done}" aria-label="Tandai hari ${day} sebagai sudah dibuat">${I.check}</button>
+    <div class="body">
+      <div class="t">${hl(title)}</div>
+      <div class="meta"><span class="no">#${day}</span>${chipCat(cat)}${chipFmt(f)}<span>${esc(when)}</span></div>
+    </div>
+    <button class="copy" data-act="copy" data-day="${day}" aria-label="Salin judul">${I.copy}</button>
+  </article>`;
+}
+function renderList(){
+  const rows = DATA.filter(matches);
+  const shown = rows.slice(0, limit);
+  $("#count").textContent = rows.length === TOTAL ? `${TOTAL} judul` : `${rows.length} dari ${TOTAL} judul`;
+  $("#list").innerHTML = shown.length ? shown.map(r => itemHTML(r)).join("")
+    : `<div class="empty">Tidak ada judul yang cocok dengan filter ini.</div>`;
+  const more = $("#more");
+  more.classList.toggle("hidden", rows.length <= limit);
+  more.textContent = `Tampilkan ${Math.min(PAGE, rows.length - limit)} lagi (${rows.length - limit} tersisa)`;
+}
+function renderCats(){
+  const el = $("#cats");
+  const all = `<button class="cat" data-cat="all" aria-pressed="${filter.cat==="all"}">Semua <em>${doneCount()}/${TOTAL}</em></button>`;
+  const rest = Object.keys(CATS).map(k => {
+    const tot = DATA.filter(r=>r[1]===k).length, dn = DATA.filter(r=>r[1]===k && isDone(r[0])).length;
+    return `<button class="cat" data-cat="${k}" aria-pressed="${filter.cat===k}"><i style="background:${CATS[k].color}"></i>${esc(CATS[k].name)} <em>${dn}/${tot}</em></button>`;
+  }).join("");
+  el.innerHTML = all + rest;
+}
+function renderAll(){ renderStats(); renderHero(); renderCats(); renderList(); }
+
+/* ---------- actions ---------- */
+let toastTimer;
+function toast(msg, actLabel, act){
+  const t = $("#toast"), b = $("#toastAct");
+  $("#toastMsg").textContent = msg;
+  if(actLabel){ b.textContent = actLabel; b.classList.remove("hidden"); b.onclick = () => { act(); t.classList.remove("show"); }; }
+  else b.classList.add("hidden");
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove("show"), actLabel ? 4500 : 2200);
+}
+function setDone(day, v){
+  if(v) state.done[day] = today(); else delete state.done[day];
+  save(); renderAll();
+}
+function toggle(day){
+  const was = isDone(day);
+  setDone(day, !was);
+  if(!was){
+    toast("Hari " + day + " ditandai selesai", "Batalkan", () => setDone(day,false));
+    if(doneCount() === TOTAL) toast("Semua 500 judul selesai!");
+  } else toast("Tanda dihapus dari hari " + day);
+}
+async function copyTitle(day){
+  const r = DATA.find(x => x[0] === Number(day)); if(!r) return;
+  try{ await navigator.clipboard.writeText(r[2]); toast("Judul disalin"); }
+  catch(e){
+    const ta = document.createElement("textarea"); ta.value = r[2]; document.body.appendChild(ta); ta.select();
+    try{ document.execCommand("copy"); toast("Judul disalin"); }catch(_){ toast("Gagal menyalin"); }
+    ta.remove();
+  }
+}
+function resetAll(){
+  if(!confirm("Hapus semua tanda 'sudah dibuat'? Tindakan ini tidak bisa dibatalkan.")) return;
+  state.done = {}; save(); renderAll(); toast("Progres direset");
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-act]");
+  if(a){
+    const day = Number(a.dataset.day);
+    if(a.dataset.act === "toggle") toggle(day);
+    else if(a.dataset.act === "done") toggle(day);
+    else if(a.dataset.act === "copy") copyTitle(day);
+    return;
+  }
+  const c = e.target.closest("[data-cat]");
+  if(c){ filter.cat = c.dataset.cat; limit = PAGE; renderCats(); renderList(); return; }
+  const s = e.target.closest("[data-st]");
+  if(s){ filter.st = s.dataset.st; limit = PAGE;
+    document.querySelectorAll("[data-st]").forEach(b => b.setAttribute("aria-pressed", b===s));
+    renderList(); }
+});
+$("#q").addEventListener("input", e => { filter.q = e.target.value.trim(); limit = PAGE; renderList(); });
+$("#more").addEventListener("click", () => { limit += PAGE; renderList(); });
+
+/* ---------- settings ---------- */
+const dlg = $("#dlg");
+$("#btnSettings").onclick = () => { $("#start").value = state.start; dlg.showModal(); };
+$("#btnClose").onclick = () => dlg.close();
+$("#start").addEventListener("change", e => { if(e.target.value){ state.start = e.target.value; save(); renderAll(); toast("Tanggal mulai diperbarui"); }});
+$("#btnReset").onclick = () => { dlg.close(); resetAll(); };
+function download(name, text, type){
+  const url = URL.createObjectURL(new Blob([text], {type}));
+  const a = document.createElement("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 1000);
+}
+$("#btnExport").onclick = () => download("albust-progress-"+today()+".json", JSON.stringify({app:"albust-planner", v:1, ...state}, null, 2), "application/json");
+$("#btnImport").onclick = () => $("#file").click();
+$("#file").addEventListener("change", async e => {
+  const f = e.target.files[0]; if(!f) return;
+  try{
+    const j = JSON.parse(await f.text());
+    if(!j || typeof j.done !== "object") throw new Error("format");
+    const clean = {};
+    for(const [k,v] of Object.entries(j.done)){ const n = Number(k); if(n>=1 && n<=TOTAL && /^\d{4}-\d{2}-\d{2}$/.test(v)) clean[n] = v; }
+    state.done = clean;
+    if(typeof j.start === "string" && /^\d{4}-\d{2}-\d{2}$/.test(j.start)) state.start = j.start;
+    save(); renderAll(); $("#start").value = state.start; toast("Progres dipulihkan");
+  }catch(err){ toast("File backup tidak valid"); }
+  e.target.value = "";
+});
+$("#btnCsv").onclick = () => {
+  const q = v => '"' + String(v).replace(/"/g,'""') + '"';
+  const lines = ["Hari,Tanggal Jadwal,Kategori,Format,Judul,Status,Tanggal Dibuat"];
+  DATA.forEach(r => lines.push([r[0], schedDate(r[0]), q(CATS[r[1]].name), FMT[r[3]], q(r[2]), isDone(r[0])?"Sudah":"Belum", state.done[r[0]]||""].join(",")));
+  download("albust-500-judul.csv", "﻿" + lines.join("\n"), "text/csv;charset=utf-8");
+};
+
+/* ---------- PWA ---------- */
+let deferred = null;
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; $("#btnInstall").classList.remove("hidden"); });
+$("#btnInstall").onclick = async () => { if(!deferred) return; deferred.prompt(); await deferred.userChoice; deferred = null; $("#btnInstall").classList.add("hidden"); };
+window.addEventListener("appinstalled", () => toast("Aplikasi terpasang"));
+if(/iphone|ipad|ipod/i.test(navigator.userAgent) && !window.matchMedia("(display-mode: standalone)").matches) $("#iosNote").hidden = false;
+if("serviceWorker" in navigator){
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(()=>{}));
+}
+
+save();
+renderAll();
+</script>
+</body>
+</html>
